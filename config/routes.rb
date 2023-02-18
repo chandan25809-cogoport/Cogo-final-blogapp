@@ -33,5 +33,6 @@ Rails.application.routes.draw do
   #Comments
 
   post '/comment/:article_id', to:'comments#create'
+  get '/comments/:article_id',to:'comments#index'
 
 end

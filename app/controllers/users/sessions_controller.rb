@@ -15,6 +15,11 @@ def respond_with(resource, _opts = {})
       status:{code:200,messages: 'User Signed in sucessfully',
       data: current_user}
     },status: :ok
+    elserender json:{
+      status: 401,
+      message: "User or password not matching ",
+    },status: :unauthourized
+
   end
 end
 # def create
